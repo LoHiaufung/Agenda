@@ -1,50 +1,52 @@
---------README-----------------------------------
-�Ľ���
-1.�������飬���Ӷ�ʱ����ȵ�������ж�
-2.��ѯ���飬���ӻ���ʱ����ȫ������ѯʱ������
-3.�г����л��飬��������Ϊ����ȡuserName��������Ļ��顣	
-			2016��8��26��12:46:00	
+```
+--------README8-----------------------------------
+改进：
+1.创建会议，增加对时间相等的情况的判断
+2.查询会议，增加会议时间完全包含查询时间的情况
+3.列出所有会议，增加限制为仅获取userName发起或参与的会议。	
+			2016年8月26日12:46:00	
 --------README7----------------------------------
-�Ľ���
-1.������AgendaService��createMeeting()��sponsor��participator���޿յ��жϣ�������ʱ�伯�Ϲ�ϵΪ����ʱ�����
-			2016��8��25��22:23:29
+改进：
+1.完善了AgendaService在createMeeting()对sponsor和participator有无空的判断：补充了时间集合关系为包含时的情况
+			2016年8月25日22:23:29
 ---------READADME7-------------------------------
-�Ľ���
-1.AgendaService��creatMeeting()ʱ������Sponsor��participator�Ƿ�ע��ļ��
-2.AgendaService��meetingQuery()ʱ����Ϊ�ɲ�ѯ����ʱ����ص����
-3.AgendaService��meetingQuery()��������ֹʱ���Ƿ�Ϸ����ж�
-4.AgendaService��meetingQuery()<by title> ����Ϊֻ�ܲ�ѯ���Լ��йصĻ���
-			2016��8��24��21:05:28
+改进：
+1.AgendaService在creatMeeting()时增添了Sponsor及participator是否注册的检查
+2.AgendaService在meetingQuery()时修正为可查询包含时间点重叠情况
+3.AgendaService在meetingQuery()增加了起止时间是否合法的判断
+4.AgendaService在meetingQuery()<by title> 修正为只能查询与自己有关的会议
+			2016年8月24日21:05:28
 --------README6----------------------------------
-�Ľ���
-1.��������һ������ʱ������BUG�����Σ�
+改进：
+1.修正了上一次修正时产生的BUG（尴尬）
 --------README5----------------------------------
-�Ľ���
-1.������Storage.cpp�е�deleteUsers()��deleteMeetings();
+改进：
+1.修正了Storage.cpp中的deleteUsers()和deleteMeetings();
 --------README4----------------------------------
-�Ľ���
-1.������Date.cpp�е�dateToString()��date���Ϸ���
-���
-			2016��8��22��23:26:37
+改进：
+1.修正了Date.cpp中的dateToString()当date不合法的
+情况
+			2016年8月22日23:26:37
 --------README3----------------------------------
-�Ľ���
-1.�����޸�Hour,Month,minute�ı߽�����
+改进：
+1.紧急修复Hour,Month,minute的边界问题
 
-			2016��8��22��05:25:35
+			2016年8月22日05:25:35
 --------README2----------------------------------
-�Ľ���
-1.����Date ��string���캯��
-2.����isValid()��dayΪ0����
-3.�Ľ���stringToDate�ĸ�ʽ�жϷ���
-4.AgendaService.cpp��creatMeeting()�����˲����߿����ظ��������˺Ͳ�����ͬһ�ˡ������߿���Ϊ�յ�bug;
+改进：
+1.补充Date 的string构造函数
+2.修正isValid()的day为0问题
+3.改进了stringToDate的格式判断方法
+4.AgendaService.cpp中creatMeeting()修正了参与者可以重复、发起人和参与者同一人、参与者可以为空的bug;
 
 ---------README---------------------------------
-    TA�����ã������ﳵȥ���ص���λͬѧ��
-    �ҵĻ����Ѿ���ɣ�Ŀǰ���Լ������Ǻ� Agenda�ӿ���������Ĳ�����������һ�¡�
-    ����汾����ȫ����Agenda��hpp�ӿ��ĵ�����ġ�
-    ������������޸�����Ĺ��ܣ����Ǹ���Agenda�ӿڲ�û��������ܣ���ע�͵��ˡ�
-    ע���л���һ��Ѳ��Դ��룬�����Ӧ�ÿ��Կ����Ҵ����ļ�����������.jpg
-    ף������彡����������죡
-			 2016��8��20��20:40:40
-			 ������ 15331234
+    TA大大，你好！我是骑车去西藏的那位同学。
+    我的基本已经完成，目前我自己测试是和 Agenda接口需求里面的测例是输出结果一致。
+    这个版本是完全按照Agenda的hpp接口文档来打的。
+    本来还设计有修改密码的功能，但是根据Agenda接口并没有这个功能，就注释掉了。
+    注释中还有一大堆测试代码，你从中应该可以看出我打代码的艰辛……流泪.jpg
+    祝大大身体健康，生活愉快！
+			 2016年8月20日20:40:40
+			 罗晓峰 15331234
 
+```
